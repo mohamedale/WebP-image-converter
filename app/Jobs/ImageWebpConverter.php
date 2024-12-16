@@ -14,7 +14,6 @@ class ImageWebpConverter implements ShouldQueue
 
     public string $imagePath;
     public string $imageQuality;
-    public bool $remoteImage = false;
 
     /**
      * Create a new job instance.
@@ -23,7 +22,6 @@ class ImageWebpConverter implements ShouldQueue
     {
         $this->imagePath = $convertingData['path'];
         $this->imageQuality = $convertingData['quality'] ?? 85;
-        $this->remoteImage = $convertingData['remoteImage'] ?? false;
     }
 
     /**
